@@ -1,10 +1,38 @@
+<<<<<<< HEAD
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+=======
+.header {
+  overflow: hidden;
+  background-color: #0a1a29;
+  padding: 20px 10px;
+  
+}
+.header-right a:hover{
+  color: #ea7826 !important;
+  background-color: #fff !important;
+}  .header-right:active a {
+  color: #ea7826 !important;
+  background-color: #fff !important;
+}
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+>>>>>>> 28f0f3de2877989834b7b13b371815717783cced
 }
 
-a {
-  color: #00B7FF;
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
 }
+<<<<<<< HEAD
 
 .header {
   overflow: hidden;
@@ -27,6 +55,8 @@ a {
   font-size: 25px;
   font-weight: bold;
 }
+=======
+>>>>>>> 28f0f3de2877989834b7b13b371815717783cced
 .header-right {
   float: right;
 }
@@ -36,15 +66,101 @@ a {
   padding: 20px 10px;
   height: 600px;
 }
+<<<<<<< HEAD
 
+=======
+.card1 {
+  /* Add shadows to create the "card" effect */
+  
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-left: 70px;
+  margin-top: 50px;
+  width: 300px;
+  height:340px
+}
+
+/* On mouse-over, add a deeper shadow */
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+>>>>>>> 28f0f3de2877989834b7b13b371815717783cced
 
 /* Add some padding inside the card container */
 .container1 {
   padding: 2px 16px;
 }
+<<<<<<< HEAD
 
+=======
+.card2{
+  /* Add shadows to create the "card" effect */
+  
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-left: 70px;
+  margin-top: 50px;
+  width: 300px;
+  height:340px
+}
+
+/* On mouse-over, add a deeper shadow */
+.card2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+>>>>>>> 28f0f3de2877989834b7b13b371815717783cced
 
 /* Add some padding inside the card container */
 .container2 {
   padding: 2px 16px;
+<<<<<<< HEAD
 }
+=======
+}
+form {
+       
+  border: 2px solid #f1f1f1;	
+  border-radius: 20px;
+}
+hr.solid1 {
+  margin-left:250px;
+  margin-top:10px;
+  margin-bottom:30px;
+  width:30%;
+  border-top: 1.5px solid #f6f6f6;
+  
+  }
+  input[type=text], input[type=password],input[type=String],input[type=email] {
+      
+    width: 45%;
+    padding: 12px 12px;
+    margin: 20px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  label {
+    color: #f6f6f6;;
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-left: -70px; 
+  }
+  .card-group{
+    margin-top: 30px;
+    width:900px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .card{
+    margin:40px;
+  }
+
+  
+
+  
+  
+  
+ 
+>>>>>>> 28f0f3de2877989834b7b13b371815717783cced
