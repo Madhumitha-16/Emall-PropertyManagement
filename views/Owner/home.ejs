@@ -1,0 +1,404 @@
+<html>
+<head>
+<title> Property Management App</title>
+<link rel="stylesheet" href="stylesheets/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="">
+  var multipleCardCarousel = document.querySelector(
+  "#carouselExampleControls"
+);
+if (window.matchMedia("(min-width: 768px)").matches) {
+  var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+    interval: false,
+  });
+  var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+  var cardWidth = $(".carousel-item").width();
+  var scrollPosition = 0;
+  $("#carouselExampleControls .carousel-control-next").on("click", function () {
+    if (scrollPosition < carouselWidth - cardWidth * 4) {
+      scrollPosition += cardWidth;
+      $("#carouselExampleControls .carousel-inner").animate(
+        { scrollLeft: scrollPosition },
+        600
+      );
+    }
+  });
+  $("#carouselExampleControls .carousel-control-prev").on("click", function () {
+    if (scrollPosition > 0) {
+      scrollPosition -= cardWidth;
+      $("#carouselExampleControls .carousel-inner").animate(
+        { scrollLeft: scrollPosition },
+        600
+      );
+    }
+  });
+} else {
+  $(multipleCardCarousel).addClass("slide");
+}
+</script>
+<style>
+  #foot{
+    background-color: #0a1a29;
+    color: #fff;
+  }
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #242424;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 400;
+
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .navbar-nav li a, .navbar-nav li.active a {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #ea7826 !important;
+    background-color: #fff !important;
+  }
+  .navbar navbar-expand-lg{
+    background-color: #ea7826;
+  }
+  .navbar-brand{
+    font-size: 40px;
+    padding-left:5% ;
+  }
+  #header{
+    background-color: #0a1a29;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+  }
+  .masthead {
+  height: 60vh;
+  min-height: 500px;
+  }
+  .btn {
+    margin:3% 1% 1%;
+    background-color: #ea7826;
+    color: #fff;
+  }
+  #head-text{
+    padding:10% 5% 5%;
+  }
+  #navbarResponsive{
+    font-size: 20px;
+  }
+  #issuebtn{
+    margin:5% 5% 5%;
+    background-color: #0a1a29;
+  }
+  #issuetext h2{
+    margin:5% 50% 5%;
+    color: #0a1a29;
+  }
+  .carousel-inner {
+  padding: 1em;
+}
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 33.333333%;
+    display: block;
+  }
+  .carousel-inner {
+    display: flex;
+  }
+}
+.card .img-wrapper {
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card img {
+    max-height: 100%;
+}
+@media (max-width: 767px) {
+  .card .img-wrapper {
+    height: 17em;
+  }
+}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm shadow fixed-top" id="header">
+    <div class="container-fluid">
+      <div class="navbar-brand" href="#">Emall</div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Occupied Spaces</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Non-Occupied Spaces</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">View Complaints</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="masthead" id="header">
+    <div class="container-fluid mt-3" id="head-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="head-text" class="col-sm-3 col-md-6">
+            <h1>Manage Spaces Here!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab nulla dolorum autem nisi officiis
+              blanditiis voluptatem hic, assumenda aspernatur facere ipsam nemo ratione cumque magnam enim fugiat
+              reprehenderit expedita.</p>
+            <button type="button" class="btn btn-lg">Occupied Spaces</button>
+            <button type="button" class="btn btn-lg">Non-Occupied Spaces</button>
+          </div>
+          <div class="col-sm-9 col-md-6">
+            <img class="img-fluid" src="https://www.buzzprostudio.com/wp-content/uploads/2015/06/choose-website-manager-for-small-business.jpg" style="width:1000px;height:560px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="row">
+    <div class="sec2">
+      <h1 style="text-align:center;margin-bottom: 30px;margin-top: 55px;">Occupied spaces</h1>
+      <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card">
+                    <div class="img-wrapper"><img src="images\Deep View of Gutman Quiet Study Area.jpg" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 1</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn">Get Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="images\Kokaistudios_Social_House-04.jpg" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 2</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn">Get Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="images\space_planning_header1.jpg" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 3</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn">Get Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="images\Deep View of Gutman Quiet Study Area.jpg" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 4</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn">Get Details</a>
+                    </div>
+                </div>
+            </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+  
+    </div>
+  </div>
+  <section class="py-5" style="background-color: #ebeced;">
+    <div class="container-fluid mt-3" id="head-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 col-md-6">
+            <img class="img-fluid" src="https://media.itpro.co.uk/image/upload/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1570816463/itpro/2019/02/managed-service-providers-cdw.jpg" style="width:1000px;height:560px;">
+          </div>
+          <div class="col-sm-9 col-md-6" id="head-text">
+            <h1>Manage Spaces Here!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab nulla dolorum autem nisi officiis
+              blanditiis voluptatem hic, assumenda aspernatur facere ipsam nemo ratione cumque magnam enim fugiat
+              reprehenderit expedita.</p>
+            <button type="button" class="btn btn-lg">Occupied Spaces</button>
+            <button type="button" class="btn btn-lg">Non-Occupied Spaces</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <div class="row">
+      <div class="sec2">
+        <h1 style="text-align:center;margin-bottom: 30px;margin-top: 55px;">Non-Occupied spaces</h1>
+        <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="card">
+                      <div class="img-wrapper"><img src="images\Kokaistudios_Social_House-20.jpg" class="d-block w-100" alt="..."> </div>
+                      <div class="card-body">
+                          <h5 class="card-title">Card title 1</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                              card's content.</p>
+                          <a href="#" class="btn ">Get Details</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="card">
+                      <div class="img-wrapper"><img src="images\How-To-Factor-In-The-Pandemic-In-Your-Retail-Space-Planning-scaled.jpeg" class="d-block w-100" alt="..."> </div>
+                      <div class="card-body">
+                          <h5 class="card-title">Card title 2</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                              card's content.</p>
+                          <a href="#" class="btn ">Get Details</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="card">
+                      <div class="img-wrapper"><img src="images\space_planning_header1.jpg" class="d-block w-100" alt="..."> </div>
+                      <div class="card-body">
+                          <h5 class="card-title">Card title 3</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                              card's content.</p>
+                          <a href="#" class="btn ">Get Details</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="card">
+                      <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                      <div class="card-body">
+                          <h5 class="card-title">Card title 4</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                              card's content.</p>
+                          <a href="#" class="btn ">Get Details</a>
+                      </div>
+                  </div>
+              </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+    
+      </div>
+    </div>
+    <div class="container-fluid" style="background-color:#cfcfcf;">
+      <div class="row" >
+        <div id="issuetext" class="col-sm-3 col-md-6" >
+          <h2>View issues</h2>
+        </div>
+        <div class="col-sm-9 col-md-6">
+          <button id="issuebtn" type="button" class="btn btn-lg">Click Here</button>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center text-lg-start" id="foot">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Footer Content</h5>
+    
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+              molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+              voluptatem veniam, est atque cumque eum delectus sint!
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+    
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-0">Links</h5>
+    
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="">Emall.com</a>
+      </div>
+    </footer>
+    </body>
+    </html>

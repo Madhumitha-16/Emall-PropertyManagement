@@ -1,8 +1,50 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #0a1a29;
+  padding: 20px 10px;
+  height: 600px;
+}
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+.header-right {
+  float: right;
+}
+.sec2 {
+  overflow: hidden;
+  background-color: white;
+  padding: 20px 10px;
+  height: 600px;
+}
+
+
+/* Add some padding inside the card container */
+.container1 {
+  padding: 2px 16px;
+}
+
+
+/* Add some padding inside the card container */
+.container2 {
+  padding: 2px 16px;
 }
