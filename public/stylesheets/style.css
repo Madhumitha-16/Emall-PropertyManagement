@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-=======
+}
 .header {
   overflow: hidden;
   background-color: #0a1a29;
@@ -24,7 +24,6 @@ body {
   font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
->>>>>>> 28f0f3de2877989834b7b13b371815717783cced
 }
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
@@ -32,7 +31,6 @@ body {
   font-size: 25px;
   font-weight: bold;
 }
-<<<<<<< HEAD
 
 .header {
   overflow: hidden;
@@ -55,8 +53,6 @@ body {
   font-size: 25px;
   font-weight: bold;
 }
-=======
->>>>>>> 28f0f3de2877989834b7b13b371815717783cced
 .header-right {
   float: right;
 }
@@ -66,9 +62,7 @@ body {
   padding: 20px 10px;
   height: 600px;
 }
-<<<<<<< HEAD
 
-=======
 .card1 {
   /* Add shadows to create the "card" effect */
   
@@ -84,15 +78,12 @@ body {
 .card1:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
->>>>>>> 28f0f3de2877989834b7b13b371815717783cced
 
 /* Add some padding inside the card container */
 .container1 {
   padding: 2px 16px;
 }
-<<<<<<< HEAD
 
-=======
 .card2{
   /* Add shadows to create the "card" effect */
   
@@ -108,20 +99,16 @@ body {
 .card2:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
->>>>>>> 28f0f3de2877989834b7b13b371815717783cced
 
 /* Add some padding inside the card container */
 .container2 {
   padding: 2px 16px;
-<<<<<<< HEAD
 }
-=======
-}
-form {
-       
+form {      
   border: 2px solid #f1f1f1;	
   border-radius: 20px;
 }
+
 hr.solid1 {
   margin-left:250px;
   margin-top:10px;
@@ -163,4 +150,3 @@ hr.solid1 {
   
   
  
->>>>>>> 28f0f3de2877989834b7b13b371815717783cced
