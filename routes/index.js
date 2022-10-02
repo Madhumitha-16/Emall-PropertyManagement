@@ -4,8 +4,8 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('Greetings', { title: 'Express' });
-  res.render('Shopkeeper/home', { title: 'Express' });
 });
+
 router.get('/signUpAs', function(req, res, next) {
   res.render('signUpAs', { title: 'Home' });
 });
@@ -24,7 +24,15 @@ router.get('/login', function(req, res, next) {
 router.get('/op', function(req, res, next) {
   res.render('Shopkeeper/ownedProperty', { title: 'Home' });
 });
-
+router.get('/loginOwner', function(req, res, next) {
+  res.render('Owner/loginOwner', { title: 'Login' });
+});
+router.get('/signupOwner', function(req, res, next) {
+  res.render('Owner/signupOwner', { title: 'Signup' });
+});
+router.get('/homeOwner', function(req, res, next) {
+  res.render('Owner/home', { title: 'Home' });
+});
 
 
 module.exports = router;
