@@ -8,35 +8,103 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<style>
+  #foot{
+    background-color: #0a1a29;
+    color: #fff;
+  }
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #242424;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 400;
+
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .navbar-nav li a, .navbar-nav li.active a {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #ea7826 !important;
+    background-color: #fff !important;
+  }
+  .navbar navbar-expand-lg{
+    background-color: #ea7826;
+  }
+  .navbar-brand{
+    font-size: 40px;
+    padding-left:5% ;
+  }
+  #header{
+    background-color: #0a1a29;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+  }
+  .masthead {
+  height: 60vh;
+  min-height: 500px;
+  }
+  .btn {
+    margin:3% 1% 1%;
+    background-color: #ea7826;
+    color: #fff;
+  }
+  #head-text{
+    padding:10% 5% 5%;
+  }
+</style>
 </head>
 <body>
-
-
-    <!-- login page -->
-    <div class="header" >
-      <a href="/" class="logo">Property Management App</a>
-      <div class="header-right">
-        <a href="/"> Dashboard</a>
-        <a href="/op">Owned Property</a>
-        <a href="/book">Booking</a>
-        <a href="/comp"> Raise Issue</a>
-        <a href="/login"> Logout</a>
-      </div>
-    </div>
     
-    <div class="split-left"style="background-color:#0a1a29;height:400px">
-      <div class="centered">
-        <h1 style="color:#f6f6f6;padding-top: 140px;padding-left: 140px;">FIND YOUR PERFECT </h1><br><h1 style="color:#f6f6f6;padding-left: 240px;">SPACE WITH EMALL</h1>
-        
+    <nav class="navbar navbar-expand-sm shadow fixed-top" id="header">
+      <div class="container-fluid">
+        <div class="navbar-brand" href="#">Emall</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Occupied Spaces</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Non-Occupied Spaces</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">View Complaints</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-
-
-    <div id="split-right"style="background-color:#0a1a29;height:100px">
-      <img src="images/img2.jpg"  style="height:270px;width:300px;margin-left:700px ;z-index: 1;margin-top: -370px;">
-            <img src="images/img.jpeg"  style="height:330px;width:400px;margin-left:800px ;z-index: 2;margin-top:-330px;"
-              alt="...">
+    </nav>
+    <header class="masthead" id="header">
+      <div class="container-fluid mt-3" id="head-section">
+        <div class="container-fluid">
+          <div class="row">
+            <div id="head-text" class="col-sm-3 col-md-6">
+              <h1 style="margin-top: 50px;">FIND YOUR PERFECT</h1><br><h1 style="margin-left:50px;"> SPACES WITH EMALL</h1>
+            </div>
+            <div class="col-sm-9 col-md-6">
+              <img class="img-fluid" src="https://www.buzzprostudio.com/wp-content/uploads/2015/06/choose-website-manager-for-small-business.jpg" style="width:1000px;height:500px;">
+            </div>
           </div>
+        </div>
+      </div>
+    </header>
     
 
 
